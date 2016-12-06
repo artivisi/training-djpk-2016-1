@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Input Pemda</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Kode:" for="kode" />
+                    <h:inputText id="kode" value="#{pemdaController.pemda.kode}" title="Kode" required="true" requiredMessage="The Kode field is required."/>
+                    <h:outputLabel value="Nama:" for="nama" />
+                    <h:inputText id="nama" value="#{pemdaController.pemda.nama}" title="Nama" required="true" requiredMessage="The Nama field is required."/>
+                </h:panelGrid>
+                <h:commandButton value="Simpan" action="#{pemdaController.simpanPemda()}"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
