@@ -14,7 +14,9 @@
             <h:form>
                 <h:panelGrid columns="3">
                     <h:outputLabel value="NIP : " for="nip" />
-                    <h:inputText id="nip" value="" required="true" requiredMessage="NIP harus diisi"/>
+                    <h:inputText id="nip" value="" required="true" requiredMessage="NIP harus diisi">
+                        <f:validateLength minimum="3" maximum="10"/>
+                    </h:inputText>
                     <h:message for="nip" style="color: red" />
                     
                     <h:outputLabel value="Nama : " for="nama" />
@@ -22,7 +24,9 @@
                     <h:message for="nama" style="color: red" />
                     
                     <h:outputLabel value="Tanggal Lahir : " for="tanggalLahir" />
-                    <h:inputText id="tanggalLahir" value="" required="true" requiredMessage="Tanggal lahir harus diisi" />
+                    <h:inputText id="tanggalLahir" value="" required="true" requiredMessage="Tanggal lahir harus diisi">
+                        <f:convertDateTime pattern="yyyy-MM-dd" />
+                    </h:inputText>
                     <h:message for="tanggalLahir" style="color: red" />
                     
                     <h:outputLabel value="Pemda : " for="pemda" />
