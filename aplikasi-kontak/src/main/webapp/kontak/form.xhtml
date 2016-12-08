@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Entri Kontak</title>
+    </h:head>
+    <h:body>
+        
+        <h1><h:outputText value="Entri Kontak"/></h1>
+        
+        <f:view>
+            <h:form>
+                <h:panelGrid columns="3">
+                    <h:outputLabel value="NIP : " for="nip" />
+                    <h:inputText value="Test"/>
+                    <h:message for="nip" />
+                    
+                    <h:outputLabel value="Nama : " for="nama" />
+                    <h:inputText value="Test" />
+                    <h:message for="nama" />
+                    
+                    <h:outputLabel value="Tanggal Lahir : " for="tanggalLahir" />
+                    <h:inputText value="Test" />
+                    <h:message for="tanggalLahir" />
+                    
+                    <h:outputLabel value="Pemda : " for="pemda" />
+                    
+                    <h:selectOneMenu>
+                        <f:selectItem itemLabel = "Pilih Pemda" itemValue=""/>
+                    </h:selectOneMenu>
+                    
+                    <h:message for="pemda" />
+                </h:panelGrid>
+                <h:commandButton value="Simpan" />
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+
