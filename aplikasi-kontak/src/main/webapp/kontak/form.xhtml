@@ -14,16 +14,16 @@
             <h:form>
                 <h:panelGrid columns="3">
                     <h:outputLabel value="NIP : " for="nip" />
-                    <h:inputText value="Test"/>
-                    <h:message for="nip" />
+                    <h:inputText id="nip" value="" required="true" requiredMessage="NIP harus diisi"/>
+                    <h:message for="nip" style="color: red" />
                     
                     <h:outputLabel value="Nama : " for="nama" />
-                    <h:inputText value="Test" />
-                    <h:message for="nama" />
+                    <h:inputText id="nama" value="" required="true" requiredMessage="Nama harus diisi" />
+                    <h:message for="nama" style="color: red" />
                     
                     <h:outputLabel value="Tanggal Lahir : " for="tanggalLahir" />
-                    <h:inputText value="Test" />
-                    <h:message for="tanggalLahir" />
+                    <h:inputText id="tanggalLahir" value="" required="true" requiredMessage="Tanggal lahir harus diisi" />
+                    <h:message for="tanggalLahir" style="color: red" />
                     
                     <h:outputLabel value="Pemda : " for="pemda" />
                     
