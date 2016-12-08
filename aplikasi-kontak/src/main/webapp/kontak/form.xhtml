@@ -33,6 +33,8 @@
                     
                     <h:selectOneMenu>
                         <f:selectItem itemLabel = "Pilih Pemda" itemValue=""/>
+                        <f:selectItems value="#{pemdaController.daftarPemda()}" var="p" 
+                                       itemLabel="#{p.nama}" itemValue="#{p.id}"/>
                     </h:selectOneMenu>
                     
                     <h:message for="pemda" />
