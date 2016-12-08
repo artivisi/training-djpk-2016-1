@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity @Table(name = "tbl_pemda")
@@ -22,9 +24,12 @@ public class Pemda implements Serializable {
     private String id;
     
     @Column(name = "kode_pemda", nullable = false, unique = true)
+    @Size(min = 3, max = 10)
+    @NotNull
     private String kode;
     
     @Column(nullable = false)
+    @Size(min = 5, max = 255)
     private String nama;
     
     @OneToMany(mappedBy = "pemda")

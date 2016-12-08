@@ -10,11 +10,14 @@
         <f:view>
             <h:form>
                 <h1><h:outputText value="Create/Edit"/></h1>
-                <h:panelGrid columns="2">
+                <h:panelGrid columns="3">
                     <h:outputLabel value="Kode:" for="kode" />
                     <h:inputText id="kode" value="#{pemdaController.pemda.kode}" title="Kode" required="true" requiredMessage="The Kode field is required."/>
+                    <h:message for="kode" style="color: red" />
+                    
                     <h:outputLabel value="Nama:" for="nama" />
                     <h:inputText id="nama" value="#{pemdaController.pemda.nama}" title="Nama" required="true" requiredMessage="The Nama field is required."/>
+                    <h:message for="nama" style="color: red" />
                 </h:panelGrid>
                 <h:commandButton value="Simpan" action="#{pemdaController.simpanPemda()}"/>
             </h:form>
