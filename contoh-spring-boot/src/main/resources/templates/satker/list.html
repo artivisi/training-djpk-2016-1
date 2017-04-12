@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Daftar Satker</title>
+</head>
+<body>
+    <h1>Daftar Satker</h1>
+    <a th:href="form">Tambah Data Baru</a>
+    <table>
+        <thead>
+        <tr>
+            <th>Kode</th>
+            <th>Nama</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="s : ${daftarSatker}">
+            <td th:text="${s.kode}">K-001</td>
+            <td th:text="${s.nama}">Nama Satker</td>
+            <td>
+                <a href="#" th:href="@{/satker/form(id=${s.id})}">
+                    edit
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

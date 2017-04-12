@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Input Satker</title>
+</head>
+<body>
+    <h1>Input Satker</h1>
+    <form method="post" th:object="${satker}">
+    <table>
+        <tr>
+            <td>Kode</td>
+            <td>
+                <input type="text" th:field="*{kode}" />
+            </td>
+            <td>
+                <ul>
+                    <li th:each="err : ${#fields.errors('kode')}" th:text="${err}" />
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Nama</td>
+            <td>
+                <input type="text" th:field="*{nama}"/>
+            </td>
+            <td>
+                <ul>
+                    <li th:each="err : ${#fields.errors('nama')}" th:text="${err}" />
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Simpan"/>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    </form>
+
+</body>
+</html>
